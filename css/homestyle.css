@@ -1,0 +1,234 @@
+:root{
+    --backgroundcolor:rgba(19, 21, 21);
+    --elementscolor:rgba(43, 44, 40);
+    --h1btncolor1:rgba(51, 153, 137);
+    --h2extracolor:rgba(125, 226, 209);
+    --textcolor:rgba(255, 250, 251);
+    --yellowcolor:rgb(238, 255, 0);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5% ;
+    font-family: 'Noto Sans JP', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size:62.5% ;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--backgroundcolor);
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    
+}
+.white{
+    color:var(--textcolor);
+}
+.spanwhite{
+    display: inline-block;
+    color: var(--textcolor);
+    transition: all 0.6s ease-in-out;
+
+}
+.spanwhite:hover{
+    transform:rotate(360deg) ;
+    color:var(--yellowcolor);
+}
+
+.spanyellow{
+    color: rgb(238, 255, 0);
+    
+}
+
+
+.btn{
+position: relative;
+display:inline-block;    
+width:150px;
+height:50px;
+border-radius: 25px;
+color: var(--backgroundcolor);
+text-align: center;
+padding: 1rem;
+font-size: 20px;
+text-decoration: none;
+overflow: hidden;
+z-index: 1;
+}
+
+/* Welcoming */
+
+#hello{
+    flex: 2;
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 3rem;
+}
+#hello h1{
+    color:var(--h1btncolor1);
+    font-size: 50px;
+    
+    
+}
+
+#hello h2{
+    color:var(--h1btncolor1);
+    font-size: 60px;
+    
+}
+#hello h3{
+    color:var(--h1btncolor1);
+    font-size: 70px;
+    
+}
+
+#hello p{
+    font-size: 2.0rem;
+    color: var(--textcolor);
+    font-weight: 100;
+    line-height: 150%;
+    text-align: left;
+    margin:2rem 0;
+}
+/* Button styling */
+
+#lilabout{
+    text-align: center;
+    margin-top: 7%;
+}
+
+.btn:hover{
+    color: var(--textcolor);
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: var(--h2extracolor);
+    z-index: -2;
+    
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0px;
+    width:0%;
+    height:100%;
+    border-radius: 25px;
+    transition: all 0.8s;
+    z-index: -1;
+    
+}
+.btn:hover::after{
+    width: 100%;
+    background-color: var(--h1btncolor1);
+}
+     
+/* } SocialMediaBar */
+#socialmedia {
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    bottom: 3%;
+    position: fixed;
+    z-index: 10;
+    background-color:rgba(43, 44, 40,0.6);;
+   
+   
+    
+}
+.socialmedia{
+    font-size: 42px;
+    color: var(--textcolor);
+    
+}
+
+
+#linkdin:hover{
+    color: #0077B5;
+}
+#facebook:hover{
+    color: #4867AA;
+}
+
+#insta:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#github:hover{
+    color: black;
+}
+
+/* Myimg */
+
+#profil{
+    display: flex;
+    height:100vh;
+    flex: 1;
+    justify-content: center;
+    align-items:stretch;
+    
+    
+}
+
+#meimg{
+    background: url('/img/Me.JPG')no-repeat center/cover ;
+    background-position: center bottom -70px ;
+    height:300px;
+    width: 300px;
+    border-radius:50%;
+    margin-top: 10rem;
+    position: relative;   
+    
+    
+}
+#meimg::before{
+    content: '';
+    background-color:rgba(0, 0, 0, 0.2);
+    height:310px;
+    width: 310px;
+    border-radius: 50%;
+    border-top: 5px transparent solid;
+    position: absolute;
+    top:-8px;
+    left:-5px;
+    z-index: -1;
+    transition: all 3s ease-in-out;
+    
+    
+}
+
+#meimg:hover::before{
+    transform:rotate(360deg);
+    border-top: 5px var(--yellowcolor) solid;
+
+
+}
+
+
+
