@@ -32,6 +32,12 @@
         width: 200px;
         background-position: center bottom -50px;
     }
+    #profil{
+        align-items: center;
+        height: 100%;
+    }
+
+
     #meimg::before{
     height: 210px;
     width: 210px;
